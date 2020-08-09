@@ -22,13 +22,13 @@ $$ p = r \left( \left\lceil \frac{y}{2 r} \right\rceil + \left\lfloor \frac{y}{2
 
 $$ p = \left\lfloor \frac{y}{r} \right\rfloor r\text{ .} \tag{2} $$
 
-I've tried to obtain equation (2) from equation (1), but I was unsuccessful (without considering ceiling and floor it is quite obvious, but the whole equivalence between ceil and floor for a single floor is not, at least for me). Either way, the two methods are equivalent, with (1) being used in the code.
+Without the ceiling and floor functions, the equivalence is quite obvious, but with then it is not, at least for me. After sometime, someone updated the Wikipedia page and show something like this [3]. Either way, as the two methods are equivalent, (1) was used in the code.
 
 Once the coordinate of the sphere's center was obtained, it was possible to restrict deposits to those within the sphere's volume, no longer in a square cross section. This was done with:
 
 $$ x^2 + (y-p)^2 + z^2 = r^2\text{ ,} \tag{3} $$ where the $ x $ and $ z $ values corresponds to the dimensions in the radiation field plane.
 
-For the last item I could have used map [3] to store the elements, with the values already being saved as a relation (center, dose), but at the time I still didn't know about this possibility. Thus, it was done through the equation of the general term of a arithmetic progression, isolating the term $ n $ in the form:
+For the last item I could have used map [4] to store the elements, with the values already being saved as a relation (center, dose), but at the time I still didn't know about this possibility. Thus, it was done through the equation of the general term of a arithmetic progression, isolating the term $ n $ in the form:
 
 $$ n = \frac{p_n + r}{2 r}\text{ ,} \tag{4} $$ where $ p_n $ is the n-th depht of the sequence, $ 2 r $ is both the diameter of the spheres and the progression ratio, since the spheres in the sequence are tangent.
 
@@ -36,4 +36,17 @@ I hope that the algorithm logic can be useful to others too. For me, it was a cu
 
 [1] - https://root.cern.ch/root/html534/guides/users-guide/InputOutput.html  
 [2] - https://root.cern.ch/root/htmldoc/guides/users-guide/Trees.html#using-ttreemakeclass  
-[3] - http://www.cplusplus.com/reference/map/map/  
+[3] - https://en.wikipedia.org/wiki/Floor_and_ceiling_functions  
+[4] - http://www.cplusplus.com/reference/map/map/  
+
+***The equivalence shown in [3]:***
+
+*If ''m'' is positive (Graham, Knuth, & Patashnik, p. 85)*
+
+$$n=\left\lceil\frac{n}{m}\right\rceil + \left\lceil\frac{n-1}{m}\right\rceil +\dots+\left\lceil\frac{n-m+1}{m}\right\rceil,$$
+
+$$n=\left\lfloor\frac{n}{m}\right\rfloor + \left\lfloor\frac{n+1}{m}\right\rfloor +\dots+\left\lfloor\frac{n+m-1}{m}\right\rfloor.$$
+
+*For ''m'' = 2 these imply*
+
+$$n= \left\lfloor \frac{n}{2}\right \rfloor + \left\lceil\frac{n}{2}\right \rceil.$$
