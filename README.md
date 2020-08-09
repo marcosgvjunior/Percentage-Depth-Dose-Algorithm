@@ -2,6 +2,8 @@
 
 **Algorithm to obtain the percentage dose depth from phase space values obtained from a simulation with GEANT4.**
 
+To see the math formulas, one could add the Chrome extension MathJax Plugin for Github: https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima
+
 A ROOT file was used as the output of the simulation [1]. In this file, information such as position and deposited energy of each particle were saved. The algorithm was implemented after the use of the MakeClass method [2], with the steps described here present in the Analysis.C file, mainly after the condition in line 88 and also in the use of the spherecenter function, at line 171.
 
 Below I briefly explain the logic used in the implementation of the code to obtain the values for the percentage dose depth curve. The algorithm was used for 3 different values of radius of spheres along the transverse axis. Then, a small variation was made to obtain the curve on the longitudinal axis, setting the depth at 1.5 cm.
@@ -32,6 +34,6 @@ $$ n = \frac{p_n + r}{2 r} \tag{4} $$ where $ p_n $ is the n-th depht of the seq
 
 I hope that the algorithm logic can be useful to others too. For me, it was a curious way of obtaining the centers's positions and a think it could be applied in others cases where discrete positions are needed from continuous values.
 
-[1] - https://root.cern.ch/root/html534/guides/users-guide/InputOutput.html
-[2] - https://root.cern.ch/root/htmldoc/guides/users-guide/Trees.html#using-ttreemakeclass
-[3] - http://www.cplusplus.com/reference/map/map/
+[1] - https://root.cern.ch/root/html534/guides/users-guide/InputOutput.html  
+[2] - https://root.cern.ch/root/htmldoc/guides/users-guide/Trees.html#using-ttreemakeclass  
+[3] - http://www.cplusplus.com/reference/map/map/  
