@@ -22,7 +22,7 @@ $$ p = r \left( \left\lceil \frac{y}{2 r} \right\rceil + \left\lfloor \frac{y}{2
 
 $$ p = \left\lfloor \frac{y}{r} \right\rfloor r\text{ .} \tag{2} $$
 
-I've tried to obtain equation (2) from equation (1), but I was unsuccessful. Either way, the two methods are equivalent, with (1) being used in the code.
+I've tried to obtain equation (2) from equation (1), but I was unsuccessful (without considering ceiling and floor it is quite obvious, but the whole equivalence between ceil and floor for a single floor is not, at least for me). Either way, the two methods are equivalent, with (1) being used in the code.
 
 Once the coordinate of the sphere's center was obtained, it was possible to restrict deposits to those within the sphere's volume, no longer in a square cross section. This was done with:
 
