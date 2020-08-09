@@ -26,11 +26,11 @@ I've tried to obtain equation (2) from equation (1), but I was unsuccessful. Eit
 
 Once the coordinate of the sphere's center was obtained, it was possible to restrict deposits to those within the sphere's volume, no longer in a square cross section. This was done with:
 
-$$ x^2 + (y-p)^2 + z^2 = r^2 \tag{3} $$ where the $ x $ and $ z $ values corresponds to the dimensions in the radiation field plane.
+$$ x^2 + (y-p)^2 + z^2 = r^2\text{ ,} \tag{3} $$ where the $ x $ and $ z $ values corresponds to the dimensions in the radiation field plane.
 
 For the last item I could have used map [3] to store the elements, with the values already being saved as a relation (center, dose), but at the time I still didn't know about this possibility. Thus, it was done through the equation of the general term of a arithmetic progression, isolating the term $ n $ in the form:
 
-$$ n = \frac{p_n + r}{2 r} \tag{4} $$ where $ p_n $ is the n-th depht of the sequence, $ 2 r $ is both the diameter of the spheres and the progression ratio, since the spheres in the sequence are tangent.
+$$ n = \frac{p_n + r}{2 r}\text{ ,} \tag{4} $$ where $ p_n $ is the n-th depht of the sequence, $ 2 r $ is both the diameter of the spheres and the progression ratio, since the spheres in the sequence are tangent.
 
 I hope that the algorithm logic can be useful to others too. For me, it was a curious way of obtaining the centers's positions and a think it could be applied in others cases where discrete positions are needed from continuous values.
 
