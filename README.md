@@ -20,7 +20,7 @@ First, some conditions were established in a way to only consider energy deposit
 
 $$ p = r \left( \left\lceil \frac{y}{2 r} \right\rceil + \left\lfloor \frac{y}{2 r} \right\rfloor \right)\text{ ,} \tag{1} $$ where $ r $ is the sphere radius, $ \lceil \rceil $ is the ceiling of the value and $ \lfloor \rfloor $ is the floor of the value. The other one was by:
 
-$$ p = \left\lfloor \frac{y}{r} \right\rfloor r\text{ .} \tag{2} $$ 
+$$ p = \left\lfloor \frac{y}{r} \right\rfloor r\text{ .} \tag{2} $$
 
 I've tried to obtain equation (2) from equation (1), but I was unsuccessful. Either way, the two methods are equivalent, with (1) being used in the code.
 
